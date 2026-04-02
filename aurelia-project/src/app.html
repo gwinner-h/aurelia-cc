@@ -1,13 +1,10 @@
 <template>
-  <h1>${message}</h1>
-  <!-- <router-view></router-view> -->
+  <h1>this is my main app</h1>
   <ul>
-    <li repeat.for="todo of todoList">
-      <input type="checkbox" checked.bind="todo.done"/>
-      <span css="text decoration: ${todo.done ? 'strike-through' : 'none'}"> ${todo.description}</span>
-      <button click.delegate="removeTodo(todo)">Remove</button>
-    </li>
+    <li><a route href="home">homepage</a></li>
+    <li><a route href="about">about</a></li>
+    <li><a route href="route: post; params.bind: {slug: 'aurelia'}">aurelia</a></li>
+    <li><a route href="route: post; params.bind: {slug: 'adv aurelia'}">adv. aurelia</a></li>
   </ul>
-  <input type="text" value.bind="newItem" />
-  <button click.delegate="addTodo()">Add</button>
+  <router-view></router-view>
 </template>

@@ -1,6 +1,9 @@
 <template>
   <h1>${message}</h1>
   <ul>
-    <li>${todo.description}</li>
+    <li>
+      <input type="checkbox" checked.bind="todo.done"/>
+      <span>${todo.description}</span>
+    </li>
   </ul>
 </template>
